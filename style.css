@@ -13,19 +13,22 @@ h2,
 h3 {
   font-weight: 300;
   letter-spacing: 0.2em;
+  line-height: 1.1;
   text-transform: uppercase;
   margin: 0;
 }
 
 h1 {
-  margin: 0;
-  line-height: 1.1;
+  font-size: 2rem;
+}
+
+h2 {
   font-size: 2rem;
 }
 
 h3 {
   font-size: 1rem;
-  margin: 0;
+  margin-bottom: 1rem;
 }
 
 p,
@@ -127,8 +130,8 @@ li:last-of-type {
 .input-field-wrap input:focus-visible {
   border-color: blue;
   outline: 1px solid blue;
+  outline-offset: 0;
   border-radius: 0;
-  /* outline: none; */
 }
 
 .phone-wrap {
