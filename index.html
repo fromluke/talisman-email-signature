@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Email Signature Template | TALISMAN</title>
+  <meta charset="utf-8">
+  <meta content="Generate your TALISMAN email signature." name="description">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+  <link rel="stylesheet" href="https://use.typekit.net/mff5wzc.css">
+</head>
+
+<body>
+  <div class="main-wrapper">
+    <div class="page-wrapper">
+      <h1>Email Signature Builder</h1>
+      <div class="divider"></div>
+      <div class="column-wrapper">
+        <div class="column">
+          <div class="form-wrap">
+            <div>
+              <p>Create your personalized TALISMAN email signature.</p>
+              <p>Once you have filled out the form, click the “Copy Email Signature” button to copy your new signature
+                to
+                your computer’s clipboard.</p>
+              <p>Then follow the instructions below to paste into Gmail or Apple Mail (or your
+                favorite email client).</p>
+            </div>
+            <!-- name -->
+            <div class="input-field-wrap">
+              <label for="signatureName">First &amp; Last Name*</label>
+              <input class="email_builder_input" type="text" name="signatureName" id="signatureName"
+                data-update="builder_name" tabindex="0">
+            </div>
+            <div class="input-field-wrap">
+              <div>
+                <label>Pronouns</label>
+                <span class="helper-text">Optional. Leave blank to hide.</span>
+              </div>
+              <input class="email_builder_input" type="text" name="signaturePronouns" id="signaturePronouns"
+                data-update="builder_pronouns" tabindex="1">
+            </div>
+            <!--  phone -->
+            <div class="input-field-wrap">
+              <div>
+                <label>Phone Number</label>
+                <span class="helper-text">Optional. Leave blank to hide.</span>
+              </div>
+              <div class="phone-wrap">
+                <input class="email_builder_input" type="text" pattern="\d[0-9]" maxlength="3" name="signaturePhone1"
+                  id="signaturePhone1" data-update="builder_phone_1" tabindex="2">
+                <input class="email_builder_input" type="text" pattern="\d[0-9]" maxlength="3" name="signaturePhone2"
+                  id="signaturePhone2" data-update="builder_phone_2" tabindex="3">
+                <input class="email_builder_input" type="text" maxlength="4" name="signaturePhone3" id="signaturePhone3"
+                  data-update="builder_phone_3" tabindex="4">
+              </div>
+            </div>
+            <!--  email -->
+            <div class="input-field-wrap">
+              <label for="signatureEmail">Email Address*</label>
+              <input class="email_builder_input" type="email" name="signatureEmail" id="signatureEmail"
+                data-update="builder_email" tabindex="5">
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="preview-title">Preview</div>
+
+          <div class="table-wrap">
+            <table width="300" id="emailSignature">
+
+              <tbody>
+                <tr>
+                  <td height="20" style="height: 20px;">
+                  </td>
+                </tr>
+                <tr>
+                  <td style="max-width: 40px; max-height: 50px; width: 40px; height: 50px;">
+                    <a href="https://www.talismanco.com/"
+                      style="font-family: HelveticaNeue-Light, Arial, sans-serif; font-weight: 400; color: rgb(0, 0, 0) !important; font-size: 12px; line-height: 18px; text-decoration: none !important; width: 40px; max-width: 40px; display: inline-block; height: 50px;">
+                      <img id="imgLarge" decoding="async"
+                        src="https://fromluke.s3.us-west-1.amazonaws.com/talisman/email/talisman-logo.png"
+                        alt="Talisman Logo" width="40" height="50"
+                        style="max-width: 40px; max-height: 50px; width: 40px; height: 50px; mso-hide:all; border:0;">
+                      <img id="imgSmall" decoding="async"
+                        src="https://fromluke.s3.us-west-1.amazonaws.com/talisman/email/talisman-logo-small.png"
+                        alt="Talisman Logo" width="40" height="50"
+                        style="max-width: 40px; max-height: 50px; width: 40px; height: 50px; border:0;">
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td height="4" style="height: 4px; line-height: 4px;">
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    style="padding: 0px; font-family: HelveticaNeue-Light, Arial, sans-serif; font-weight: 700; color: rgb(0, 0, 0); font-size: 13px; line-height: 18px;">
+                    T A L I S M A N
+                    <span
+                      style="padding: 0px; font-family: HelveticaNeue-Light, Arial, sans-serif; font-weight: 400; color: #808080; font-size: 13px; line-height: 18px;">
+                      &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
+                    <span class="builder_name"
+                      style="padding: 0px; font-family: HelveticaNeue-Light, Arial, sans-serif; font-weight: 400; color: #808080; font-size: 13px; line-height: 18px;">
+                      Your Name</span>&nbsp;
+                    <span id="pronouns" class="builder_pronouns"
+                      style="display: none; padding: 0px; font-family: HelveticaNeue-Light, Arial, sans-serif; font-weight: 400; color: #808080; font-size: 13px; line-height: 18px;"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td height="2" style="height: 2px;">
+                  </td>
+                </tr>
+                <tr id="phoneNumber" style="display: none;">
+                  <td
+                    style=" padding: 0px; font-family: HelveticaNeue-Light, Arial, sans-serif; font-weight: 400; color:#808080; font-size: 12px; line-height: 18px;">
+                    <span
+                      style="padding: 0px; font-family: HelveticaNeue-Light, Arial, sans-serif; font-weight: 400; color: #999; font-size: 12px; line-height: 18px;">T<span
+                        style="padding: 0px; font-family: HelveticaNeue-Light, Arial, sans-serif; font-weight: 400; color: #ccc; font-size: 12px; line-height: 18px;">&nbsp;&nbsp;·&nbsp;</span>
+                    </span><span><a id="signaturePhone" href="tel:"
+                        style="font-family: HelveticaNeue-Light, Arial, sans-serif; font-weight: 400; color: #808080 !important; font-size: 12px; line-height: 18px; text-decoration: none !important;">
+                        <span class="builder_phone_1"></span><span>.</span><span
+                          class="builder_phone_2"></span><span>.</span><span class="builder_phone_3"></span></a>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    style="padding: 0px; font-family: HelveticaNeue-Light, Arial, sans-serif; font-weight: 400; color: #808080; font-size: 12px; line-height: 18px;">
+                    <span
+                      style="padding: 0px; font-family: HelveticaNeue-Light, Arial, sans-serif; font-weight: 400; color: #999; font-size: 12px; line-height: 18px;">E<span
+                        style="padding: 0px; font-family: HelveticaNeue-Light, Arial, sans-serif; font-weight: 400; color: #ccc; font-size: 12px; line-height: 18px;">&nbsp;&nbsp;·&nbsp;</span>
+                    </span><span><a id="signatureEmail" class="builder_email" href="mailto:"
+                        style="font-family: HelveticaNeue-Light, Arial, sans-serif; font-weight: 400; color: #808080 !important; font-size: 12px; line-height: 18px; text-decoration: none !important;">name@example.com</a>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    style="padding: 0px; font-family: HelveticaNeue-Light, Arial, sans-serif; font-weight: 400; color: #808080; font-size: 12px; line-height: 18px;">
+                    <span
+                      style="padding: 0px; font-family: HelveticaNeue-Light, Arial, sans-serif; font-weight: 400; color: #999; font-size: 12px; line-height: 18px;">W<span
+                        style="padding: 0px; font-family: HelveticaNeue-Light, Arial, sans-serif; font-weight: 400; color: #ccc; font-size: 12px; line-height: 18px;">&nbsp;·&nbsp;</span>
+                    </span><span><a href="https://www.talismanco.com/"
+                        style="font-family: HelveticaNeue-Light, Arial, sans-serif; font-weight: 400; color: #808080 !important; font-size: 12px; line-height: 18px; text-decoration: none !important;">www.talismanco.com</a>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td height="20" style="height: 20px;">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+
+          <button id="copyButton" tabindex="6">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              viewBox="0 0 24 24">
+              <path
+                d="M20 2H10c-1.103 0-2 .897-2 2v4H4c-1.103 0-2 .897-2 2v10c0 1.103.897 2 2 2h10c1.103 0 2-.897 2-2v-4h4c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zM4 20V10h10l.002 10H4zm16-6h-4v-4c0-1.103-.897-2-2-2h-4V4h10v10z">
+              </path>
+            </svg>
+            <span>Copy Email Signature</span>
+          </button>
+          <p class="error"></p>
+
+          <p style="font-size: 0.625rem">This tool works best in modern browsers like Chrome, Safari, or Firefox.</p>
+
+        </div>
+      </div>
+    </div>
+    <div class="column-wrapper down">
+      <h2>Email Signature Setup</h2>
+      <div class="divider"></div>
+      <h3>Gmail</h3>
+      <ol>
+        <li>Generate and copy the output/result from the email signature builder.</li>
+        <li>Within Gmail, click the Settings gear icon, then click “See all settings”.</li>
+        <li>Scroll down to the Signature section. Paste the entire signature, being sure to maintain type weights and
+          styling.</li>
+        <li>Click “Save Changes” at the bottom of the screen.</li>
+      </ol>
+      <div class="divider"></div>
+      <h3>Apple Mail</h3>
+      <ol>
+        <li>Generate and copy the output/result from the email signature builder.</li>
+        <li>Within Mac Mail, go to Mail > Preferences, and click the Signatures tab.</li>
+        <li>Uncheck the “Always match my default message font” below the form field.</li>
+        <li>Paste the entire signature, being sure to maintain type weights and styling.</li>
+        <li>If it’s not already selected, under “Choose Signature”, select the signature just created.</li>
+        <li>Done. No save button. Compose a new message and make sure the formatting is correct.</li>
+      </ol>
+    </div>
+  </div>
+</body>
+
+<script src="./script.js"></script>
+
+</html>
